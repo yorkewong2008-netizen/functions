@@ -39,25 +39,38 @@
       position: relative;
     }
 
-    /* 마우스 올렸을 때 확대 + 그림자 강조 */
     .card:hover {
       transform: scale(1.03);
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       filter: brightness(1.05);
     }
 
-    /* 클릭 시 반짝이는 애니메이션 */
     .card:active {
       transform: scale(0.98);
       filter: brightness(1.3);
       transition: transform 0.05s ease, filter 0.05s ease;
     }
 
+    /* iframe 기본 크기 */
     iframe {
       width: 100%;
       height: 350px;
       border: none;
       pointer-events: none; /* 클릭 방지 */
+    }
+
+    /* 확대용 래퍼 */
+    .iframe-wrapper {
+      overflow: hidden;
+      height: 350px;
+    }
+
+    /* 2번 그래프만 확대 */
+    .iframe-wrapper.scale-graph iframe {
+      width: 120%;
+      height: 120%;
+      transform: scale(1.2);
+      transform-origin: center;
     }
 
     .description {
@@ -99,12 +112,14 @@
       </div>
     </a>
 
-    <!-- 그래프 2 -->
+    <!-- 그래프 2 (확대 적용됨) -->
     <a href="https://www.desmos.com/calculator/ibvp8qyrce" target="_blank" class="card">
-      <iframe src="https://www.desmos.com/calculator/ibvp8qyrce?embed"></iframe>
+      <div class="iframe-wrapper scale-graph">
+        <iframe src="https://www.desmos.com/calculator/ibvp8qyrce?embed"></iframe>
+      </div>
       <div class="description">
         <h2>Graph 2</h2>
-        <p>Description for graph 2.</p>
+        <p>Description for graph 2 (zoom adjusted).</p>
       </div>
     </a>
 
