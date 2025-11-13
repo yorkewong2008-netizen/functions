@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advanced Function CCT</title> 
+
   <style>
     body {
       font-family: "Noto Sans KR", sans-serif;
@@ -48,16 +49,14 @@
       width: 100%;
       height: 350px;
       border: none;
-      pointer-events: none; /* 기본적으로 클릭 방지 */
+      pointer-events: none;
     }
 
-    /* 확대용 래퍼 */
     .iframe-wrapper {
       overflow: hidden;
       height: 350px;
     }
 
-    /* 2번 그래프만 확대 */
     .iframe-wrapper.scale-graph iframe {
       width: 120%;
       height: 120%;
@@ -99,10 +98,9 @@
       background-color: #fffbea;
     }
 
-    /* 아래쪽 버튼 컨트롤 */
     .controls {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 30px;
     }
 
     .controls button {
@@ -121,6 +119,14 @@
       background-color: #357ABD;
     }
 
+    .copied-msg {
+      text-align: center;
+      color: green;
+      font-size: 0.9em;
+      margin-top: 10px;
+      display: none;
+    }
+
     footer {
       text-align: center;
       margin-top: 30px;
@@ -128,6 +134,7 @@
     }
   </style>
 </head>
+
 <body>
   <h1>ADVANCED FUNCTION CCT ♾️</h1>
 
@@ -140,10 +147,15 @@
       </a>
       <div class="description" contenteditable="false">
         <h2>Graph 1</h2>
-        <p>Parent Function: f(x)=1/x.<br>Reflection on the x-axis.<br>Vertical Stretch by factor of 1.2.<br>Vertical Transformation 0.3 units upward.<br>Horizontal Compression by factor of 1/6.<br>Horizontal Transformation 2.8 units to left.</p>
+        <p>Parent Function: f(x)=1/x.<br>
+        Reflection on the x-axis.<br>
+        Vertical Stretch by factor of 1.2.<br>
+        Vertical Transformation 0.3 units upward.<br>
+        Horizontal Compression by factor of 1/6.<br>
+        Horizontal Transformation 2.8 units to left.</p>
       </div>
       <div class="why" contenteditable="false">
-        <h3>Justification/Reasoning for transformation(s): </h3>
+        <h3>Why I Chose This Graph and Picture</h3>
         <p>I chose this graph because it clearly demonstrates how reciprocal functions behave when reflected and stretched.</p>
       </div>
     </div>
@@ -157,10 +169,14 @@
       </a>
       <div class="description" contenteditable="false">
         <h2>Graph 2</h2>
-        <p>Parent Function: f(x) = 1/x²<br>Vertical Stretch by 4<br>Vertical Transformation 3.3 units down<br>Horizontal Stretch by 2<br>Horizontal Transformation 0.9 units left</p>
+        <p>Parent Function: f(x) = 1/x²<br>
+        Vertical Stretch by 4<br>
+        Vertical Transformation 3.3 units down<br>
+        Horizontal Stretch by 2<br>
+        Horizontal Transformation 0.9 units left</p>
       </div>
       <div class="why" contenteditable="false">
-        <h3>Justification/Reasoning for transformation(s): </h3>
+        <h3>Why I Chose This Graph and Picture</h3>
         <p>This graph shows how the reciprocal squared function changes shape through vertical and horizontal transformations.</p>
       </div>
     </div>
@@ -172,78 +188,128 @@
       </a>
       <div class="description" contenteditable="false">
         <h2>Graph 3</h2>
-        <p>Parent Function: f(x)=x³<br>Vertical Compression by 0.06<br>Horizontal Transformations: 2.4 left, 4.5 right, 1.2 right.</p>
+        <p>Parent Function: f(x)=x³<br>
+        Vertical Compression by 0.06<br>
+        Horizontal Transformations: 2.4 left, 4.5 right, 1.2 right.</p>
       </div>
       <div class="why" contenteditable="false">
-        <h3>Justification/Reasoning for transformation(s): </h3>
+        <h3>Why I Chose This Graph and Picture</h3>
         <p>I found cubic transformations interesting because small changes can drastically alter the curvature and inflection points.</p>
       </div>
     </div>
 
-    <!-- Graph 4~9 (동일 구조 유지) -->
+    <!-- Graph 4 -->
     <div class="card">
-      <a href="https://www.desmos.com/calculator/gj5bl2wtgy" target="_blank" class="iframe-link">
-        <iframe src="https://www.desmos.com/calculator/gj5bl2wtgy?embed"></iframe>
+      <a href="https://www.desmos.com/calculator/YOUR_GRAPH_4_LINK" target="_blank" class="iframe-link">
+        <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_4_LINK?embed"></iframe>
       </a>
-      <div class="description" contenteditable="false"><h2>Graph 4</h2><p>Description for graph 4.</p></div>
-      <div class="why" contenteditable="false"><h3>Justification/Reasoning for transformation(s): </h3><p>Write your explanation for why you selected this graph here.</p></div>
+      <div class="description" contenteditable="false">
+        <h2>Graph 4</h2>
+        <p>Description for graph 4.</p>
+      </div>
+      <div class="why" contenteditable="false">
+        <h3>Why I Chose This Graph and Picture</h3>
+        <p>Write your explanation for why you selected this graph here.</p>
+      </div>
     </div>
 
+    <!-- Graph 5 -->
     <div class="card">
       <a href="https://www.desmos.com/calculator/YOUR_GRAPH_5_LINK" target="_blank" class="iframe-link">
         <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_5_LINK?embed"></iframe>
       </a>
-      <div class="description" contenteditable="false"><h2>Graph 5</h2><p>Description for graph 5.</p></div>
-      <div class="why" contenteditable="false"><h3>Justification/Reasoning for transformation(s): </h3><p>Write your explanation for why you selected this graph here.</p></div>
+      <div class="description" contenteditable="false">
+        <h2>Graph 5</h2>
+        <p>Description for graph 5.</p>
+      </div>
+      <div class="why" contenteditable="false">
+        <h3>Why I Chose This Graph and Picture</h3>
+        <p>Write your explanation for why you selected this graph here.</p>
+      </div>
     </div>
 
+    <!-- Graph 6 -->
     <div class="card">
       <a href="https://www.desmos.com/calculator/YOUR_GRAPH_6_LINK" target="_blank" class="iframe-link">
         <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_6_LINK?embed"></iframe>
       </a>
-      <div class="description" contenteditable="false"><h2>Graph 6</h2><p>Description for graph 6.</p></div>
-      <div class="why" contenteditable="false"><h3>Justification/Reasoning for transformation(s): </h3><p>Write your explanation for why you selected this graph here.</p></div>
+      <div class="description" contenteditable="false">
+        <h2>Graph 6</h2>
+        <p>Description for graph 6.</p>
+      </div>
+      <div class="why" contenteditable="false">
+        <h3>Why I Chose This Graph and Picture</h3>
+        <p>Write your explanation for why you selected this graph here.</p>
+      </div>
     </div>
 
+    <!-- Graph 7 -->
     <div class="card">
       <a href="https://www.desmos.com/calculator/YOUR_GRAPH_7_LINK" target="_blank" class="iframe-link">
         <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_7_LINK?embed"></iframe>
       </a>
-      <div class="description" contenteditable="false"><h2>Graph 7</h2><p>Description for graph 7.</p></div>
-      <div class="why" contenteditable="false"><h3>Justification/Reasoning for transformation(s): </h3><p>Write your explanation for why you selected this graph here.</p></div>
+      <div class="description" contenteditable="false">
+        <h2>Graph 7</h2>
+        <p>Description for graph 7.</p>
+      </div>
+      <div class="why" contenteditable="false">
+        <h3>Why I Chose This Graph and Picture</h3>
+        <p>Write your explanation for why you selected this graph here.</p>
+      </div>
     </div>
 
+    <!-- Graph 8 -->
     <div class="card">
       <a href="https://www.desmos.com/calculator/YOUR_GRAPH_8_LINK" target="_blank" class="iframe-link">
         <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_8_LINK?embed"></iframe>
       </a>
-      <div class="description" contenteditable="false"><h2>Graph 8</h2><p>Description for graph 8.</p></div>
-      <div class="why" contenteditable="false"><h3>Justification/Reasoning for transformation(s): </h3><p>Write your explanation for why you selected this graph here.</p></div>
+      <div class="description" contenteditable="false">
+        <h2>Graph 8</h2>
+        <p>Description for graph 8.</p>
+      </div>
+      <div class="why" contenteditable="false">
+        <h3>Why I Chose This Graph and Picture</h3>
+        <p>Write your explanation for why you selected this graph here.</p>
+      </div>
     </div>
 
+    <!-- Graph 9 -->
     <div class="card">
       <a href="https://www.desmos.com/calculator/YOUR_GRAPH_9_LINK" target="_blank" class="iframe-link">
         <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_9_LINK?embed"></iframe>
       </a>
-      <div class="description" contenteditable="false"><h2>Graph 9</h2><p>Description for graph 9.</p></div>
-      <div class="why" contenteditable="false"><h3>Justification/Reasoning for transformation(s): </h3><p>Write your explanation for why you selected this graph here.</p></div>
+      <div class="description" contenteditable="false">
+        <h2>Graph 9</h2>
+        <p>Description for graph 9.</p>
+      </div>
+      <div class="why" contenteditable="false">
+        <h3>Why I Chose This Graph and Picture</h3>
+        <p>Write your explanation for why you selected this graph here.</p>
+      </div>
     </div>
 
   </div>
 
-  <!-- 버튼을 footer 위로 이동 -->
+  <!-- ==========================
+       버튼 (footer 위)
+       ========================== -->
   <div class="controls">
     <button id="toggleEdit">✏️ Start Editing</button>
-    <button id="downloadHTML">💾 Download the New HTML Code</button>
+    <button id="copyHTML">📋 Copy HTML Code</button>
+    <div class="copied-msg" id="copiedMsg">✅ HTML code copied to clipboard!</div>
   </div>
 
+  <!-- ==========================
+       Footer
+       ========================== -->
   <footer>
     <p>MATH CCT © 2025 | Gitae Park & Yuhuan Huang & Weixuan Bong</p>
   </footer>
 
   <script>
     const toggleButton = document.getElementById("toggleEdit");
-    const downloadButton = document.getElementById("downloadHTML");
+    const copyButton = document.getElementById("copyHTML");
+    const copiedMsg = document.getElementById("copiedMsg");
     let editMode = false;
 
     toggleButton.addEventListener("click", () => {
@@ -254,15 +320,20 @@
       toggleButton.textContent = editMode ? "✅ Stop Editing" : "✏️ Start Editing";
     });
 
-    downloadButton.addEventListener("click", () => {
+    copyButton.addEventListener("click", async () => {
       const html = document.documentElement.outerHTML;
-      const blob = new Blob([html], { type: "text/html" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "Advanced_Function_CCT_edited.html";
-      a.click();
-      URL.revokeObjectURL(url);
+      try {
+        await navigator.clipboard.writeText(html);
+        copiedMsg.style.display = "block";
+        copiedMsg.style.color = "green";
+        copiedMsg.textContent = "✅ HTML code copied to clipboard!";
+        setTimeout(() => { copiedMsg.style.display = "none"; }, 2000);
+      } catch (err) {
+        copiedMsg.style.display = "block";
+        copiedMsg.style.color = "red";
+        copiedMsg.textContent = "❌ Failed to copy HTML code.";
+        setTimeout(() => { copiedMsg.style.display = "none"; }, 2000);
+      }
     });
   </script>
 </body>
