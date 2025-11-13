@@ -64,6 +64,14 @@
       transform-origin: center;
     }
 
+    /* 새로 확대 적용할 클래스 */
+    .iframe-wrapper.scale-small iframe {
+      width: 110%;
+      height: 110%;
+      transform: scale(1.1);
+      transform-origin: center;
+    }
+
     .description, .why {
       padding: 15px 20px;
       text-align: left;
@@ -198,10 +206,12 @@
       </div>
     </div>
 
-    <!-- Graph 4 -->
+    <!-- Graph 4 (Slightly enlarged) -->
     <div class="card">
       <a href="https://www.desmos.com/calculator/gj5bl2wtgy" target="_blank" class="iframe-link">
-        <iframe src="https://www.desmos.com/calculator/gj5bl2wtgy?embed"></iframe>
+        <div class="iframe-wrapper scale-small">
+          <iframe src="https://www.desmos.com/calculator/gj5bl2wtgy?embed"></iframe>
+        </div>
       </a>
       <div class="description" contenteditable="false">
         <h2>Graph 4</h2>
@@ -215,7 +225,7 @@
 
     <!-- Graph 5 -->
     <div class="card">
-      <a href="https://www.desmos.com/calculator/kijhxcvnxs target="_blank" class="iframe-link">
+      <a href="https://www.desmos.com/calculator/kijhxcvnxs" target="_blank" class="iframe-link">
         <iframe src="https://www.desmos.com/calculator/kijhxcvnxs?embed"></iframe>
       </a>
       <div class="description" contenteditable="false">
@@ -243,10 +253,12 @@
       </div>
     </div>
 
-    <!-- Graph 7 -->
+    <!-- Graph 7 (Slightly enlarged) -->
     <div class="card">
       <a href="https://www.desmos.com/calculator/bm87g1lbee" target="_blank" class="iframe-link">
-        <iframe src="https://www.desmos.com/calculator/bm87g1lbee?embed"></iframe>
+        <div class="iframe-wrapper scale-small">
+          <iframe src="https://www.desmos.com/calculator/bm87g1lbee?embed"></iframe>
+        </div>
       </a>
       <div class="description" contenteditable="false">
         <h2>Graph 7</h2>
@@ -258,10 +270,12 @@
       </div>
     </div>
 
-    <!-- Graph 8 -->
+    <!-- Graph 8 (Slightly enlarged) -->
     <div class="card">
       <a href="https://www.desmos.com/calculator/d1xxmsd2fa" target="_blank" class="iframe-link">
-        <iframe src="https://www.desmos.com/calculator/d1xxmsd2fa?embed"></iframe>
+        <div class="iframe-wrapper scale-small">
+          <iframe src="https://www.desmos.com/calculator/d1xxmsd2fa?embed"></iframe>
+        </div>
       </a>
       <div class="description" contenteditable="false">
         <h2>Graph 8</h2>
