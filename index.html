@@ -18,6 +18,27 @@
       margin-bottom: 40px;
     }
 
+    .controls {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .controls button {
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95em;
+      margin: 0 5px;
+      transition: background-color 0.2s ease;
+    }
+
+    .controls button:hover {
+      background-color: #357ABD;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -32,6 +53,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+      text-decoration: none;
       color: inherit;
       display: block;
       position: relative;
@@ -43,8 +65,10 @@
       filter: brightness(1.05);
     }
 
-    .iframe-link {
-      display: block;
+    .card:active {
+      transform: scale(0.98);
+      filter: brightness(1.3);
+      transition: transform 0.05s ease, filter 0.05s ease;
     }
 
     iframe {
@@ -89,11 +113,15 @@
       border-top: 1px solid #eee;
     }
 
+    .why h3 {
+      margin: 0 0 8px;
+      font-size: 1em;
+      color: #222;
+    }
+
     [contenteditable="true"] {
-      background-color: #fffbe7;
-      outline: 1px dashed #ccc;
-      border-radius: 4px;
-      cursor: text;
+      outline: 2px dashed #ffd54f;
+      background-color: #fffbea;
     }
 
     footer {
@@ -106,59 +134,112 @@
 <body>
   <h1>ADVANCED FUNCTION CCT ♾️</h1>
 
+  <div class="controls">
+    <button id="toggleEdit">✏️ 편집모드 켜기</button>
+    <button id="downloadHTML">💾 수정된 HTML 다운로드</button>
+  </div>
+
   <div class="grid">
 
-    <!-- Graph 1 -->
-    <div class="card">
-      <a href="https://www.desmos.com/calculator/lstl92qkhe" target="_blank" class="iframe-link">
-        <iframe src="https://www.desmos.com/calculator/lstl92qkhe?embed"></iframe>
-      </a>
-      <div class="description">
+    <!-- graph 1 -->
+    <a href="https://www.desmos.com/calculator/lstl92qkhe" target="_blank" class="card">
+      <iframe src="https://www.desmos.com/calculator/lstl92qkhe?embed"></iframe>
+      <div class="description" contenteditable="false">
         <h2>Graph 1</h2>
-        <p contenteditable="true" data-id="desc1">
+        <p>
           Parent Function: f(x)=1/x.<br>
           Reflection on the x-axis.<br>
           Vertical Stretch by factor of 1.2.<br>
           Vertical Transformation 0.3 units upward.<br>
           Horizontal Compression by factor of 1/6.<br>
           Horizontal Transformation 2.8 units to left.<br>
-          range:<br>domain
+          range:<br>
+          domain<br>
         </p>
       </div>
-      <div class="why">
+      <div class="why" contenteditable="false">
         <h3>Why I Chose This Graph and Picture</h3>
-        <p contenteditable="true" data-id="why1">
-          I chose this graph because it clearly demonstrates how reciprocal functions behave when reflected and stretched.
-        </p>
+        <p>I chose this graph because it clearly demonstrates how reciprocal functions behave when reflected and stretched.</p>
       </div>
-    </div>
+    </a>
 
-    <!-- Graph 2 -->
-    <div class="card">
-      <a href="https://www.desmos.com/calculator/ibvp8qyrce" target="_blank" class="iframe-link">
-        <div class="iframe-wrapper scale-graph">
-          <iframe src="https://www.desmos.com/calculator/ibvp8qyrce?embed"></iframe>
-        </div>
-      </a>
-      <div class="description">
+    <!-- graph 2 -->
+    <a href="https://www.desmos.com/calculator/ibvp8qyrce" target="_blank" class="card">
+      <div class="iframe-wrapper scale-graph">
+        <iframe src="https://www.desmos.com/calculator/ibvp8qyrce?embed"></iframe>
+      </div>
+      <div class="description" contenteditable="false">
         <h2>Graph 2</h2>
-        <p contenteditable="true" data-id="desc2">
-          Parent Function: f(x)=1/x²<br>
+        <p>
+          Parent Function: f(x) = 1/x²<br>
           Vertical Stretch by a factor of 4<br>
           Vertical Transformation 3.3 units down<br>
           Horizontal Stretch by factor of 2<br>
           Horizontal Transformation 0.9 units left
         </p>
       </div>
-      <div class="why">
+      <div class="why" contenteditable="false">
         <h3>Why I Chose This Graph and Picture</h3>
-        <p contenteditable="true" data-id="why2">
-          This graph shows how the reciprocal squared function changes shape through vertical and horizontal transformations.
+        <p>This graph shows how the reciprocal squared function changes shape through vertical and horizontal transformations.</p>
+      </div>
+    </a>
+
+    <!-- 그래프 3 -->
+    <a href="https://www.desmos.com/calculator/5lij2rpwgf" target="_blank" class="card">
+      <iframe src="https://www.desmos.com/calculator/5lij2rpwgf?embed"></iframe>
+      <div class="description" contenteditable="false">
+        <h2>Graph 3</h2>
+        <p>
+          Parent Function: f(x) = x³<br>
+          Vertical Compression by a factor of 0.06<br>
+          Horizontal Transformation of 2.4 units left<br>
+          Horizontal Transformation of 4.5 units right<br>
+          Horizontal Transformation of 1.2 units right<br>
         </p>
       </div>
-    </div>
+      <div class="why" contenteditable="false">
+        <h3>Why I Chose This Graph and Picture</h3>
+        <p>I found cubic transformations interesting because small changes can drastically alter curvature and inflection points.</p>
+      </div>
+    </a>
 
-    <!-- 나머지 그래프들도 같은 구조로 -->
+    <!-- 그래프 4~9 기본 템플릿 -->
+    <a href="https://www.desmos.com/calculator/YOUR_GRAPH_4_LINK" target="_blank" class="card">
+      <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_4_LINK?embed"></iframe>
+      <div class="description" contenteditable="false"><h2>Graph 4</h2><p>Description for graph 4.</p></div>
+      <div class="why" contenteditable="false"><h3>Why I Chose This Graph and Picture</h3><p>Write your explanation for why you selected this graph here.</p></div>
+    </a>
+
+    <a href="https://www.desmos.com/calculator/YOUR_GRAPH_5_LINK" target="_blank" class="card">
+      <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_5_LINK?embed"></iframe>
+      <div class="description" contenteditable="false"><h2>Graph 5</h2><p>Description for graph 5.</p></div>
+      <div class="why" contenteditable="false"><h3>Why I Chose This Graph and Picture</h3><p>Write your explanation for why you selected this graph here.</p></div>
+    </a>
+
+    <a href="https://www.desmos.com/calculator/YOUR_GRAPH_6_LINK" target="_blank" class="card">
+      <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_6_LINK?embed"></iframe>
+      <div class="description" contenteditable="false"><h2>Graph 6</h2><p>Description for graph 6.</p></div>
+      <div class="why" contenteditable="false"><h3>Why I Chose This Graph and Picture</h3><p>Write your explanation for why you selected this graph here.</p></div>
+    </a>
+
+    <a href="https://www.desmos.com/calculator/YOUR_GRAPH_7_LINK" target="_blank" class="card">
+      <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_7_LINK?embed"></iframe>
+      <div class="description" contenteditable="false"><h2>Graph 7</h2><p>Description for graph 7.</p></div>
+      <div class="why" contenteditable="false"><h3>Why I Chose This Graph and Picture</h3><p>Write your explanation for why you selected this graph here.</p></div>
+    </a>
+
+    <a href="https://www.desmos.com/calculator/YOUR_GRAPH_8_LINK" target="_blank" class="card">
+      <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_8_LINK?embed"></iframe>
+      <div class="description" contenteditable="false"><h2>Graph 8</h2><p>Description for graph 8.</p></div>
+      <div class="why" contenteditable="false"><h3>Why I Chose This Graph and Picture</h3><p>Write your explanation for why you selected this graph here.</p></div>
+    </a>
+
+    <a href="https://www.desmos.com/calculator/YOUR_GRAPH_9_LINK" target="_blank" class="card">
+      <iframe src="https://www.desmos.com/calculator/YOUR_GRAPH_9_LINK?embed"></iframe>
+      <div class="description" contenteditable="false"><h2>Graph 9</h2><p>Description for graph 9.</p></div>
+      <div class="why" contenteditable="false"><h3>Why I Chose This Graph and Picture</h3><p>Write your explanation for why you selected this graph here.</p></div>
+    </a>
+
   </div>
 
   <footer>
@@ -166,14 +247,27 @@
   </footer>
 
   <script>
-    document.querySelectorAll('[contenteditable="true"]').forEach(el => {
-      const key = el.dataset.id;
-      const saved = localStorage.getItem(key);
-      if (saved) el.innerHTML = saved;
+    const toggleButton = document.getElementById("toggleEdit");
+    const downloadButton = document.getElementById("downloadHTML");
+    let editMode = false;
 
-      el.addEventListener('input', () => {
-        localStorage.setItem(key, el.innerHTML);
+    toggleButton.addEventListener("click", () => {
+      editMode = !editMode;
+      document.querySelectorAll(".description, .why").forEach(el => {
+        el.contentEditable = editMode;
       });
+      toggleButton.textContent = editMode ? "✅ 편집모드 끄기" : "✏️ 편집모드 켜기";
+    });
+
+    downloadButton.addEventListener("click", () => {
+      const html = document.documentElement.outerHTML;
+      const blob = new Blob([html], { type: "text/html" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Advanced_Function_CCT_edited.html";
+      a.click();
+      URL.revokeObjectURL(url);
     });
   </script>
 </body>
