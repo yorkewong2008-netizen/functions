@@ -32,7 +32,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       overflow: hidden;
       transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
-      text-decoration: none;
       color: inherit;
       display: block;
       position: relative;
@@ -44,10 +43,8 @@
       filter: brightness(1.05);
     }
 
-    .card:active {
-      transform: scale(0.98);
-      filter: brightness(1.3);
-      transition: transform 0.05s ease, filter 0.05s ease;
+    .iframe-link {
+      display: block;
     }
 
     iframe {
@@ -69,7 +66,7 @@
       transform-origin: center;
     }
 
-    .description {
+    .description, .why {
       padding: 15px 20px;
       text-align: left;
     }
@@ -80,7 +77,7 @@
       font-size: 1.2em;
     }
 
-    .description p {
+    .description p, .why p {
       margin: 8px 0;
       line-height: 1.6;
       color: #555;
@@ -90,24 +87,8 @@
     .why {
       background-color: #f9fafc;
       border-top: 1px solid #eee;
-      padding: 15px 20px;
-      color: #333;
     }
 
-    .why h3 {
-      margin: 0 0 8px;
-      font-size: 1em;
-      color: #222;
-    }
-
-    .why p {
-      margin: 0;
-      font-size: 0.95em;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    /* 편집 시 스타일 */
     [contenteditable="true"] {
       background-color: #fffbe7;
       outline: 1px dashed #ccc;
@@ -127,9 +108,11 @@
 
   <div class="grid">
 
-    <!-- graph 1 -->
-    <a href="https://www.desmos.com/calculator/lstl92qkhe" target="_blank" class="card">
-      <iframe src="https://www.desmos.com/calculator/lstl92qkhe?embed"></iframe>
+    <!-- Graph 1 -->
+    <div class="card">
+      <a href="https://www.desmos.com/calculator/lstl92qkhe" target="_blank" class="iframe-link">
+        <iframe src="https://www.desmos.com/calculator/lstl92qkhe?embed"></iframe>
+      </a>
       <div class="description">
         <h2>Graph 1</h2>
         <p contenteditable="true" data-id="desc1">
@@ -139,8 +122,7 @@
           Vertical Transformation 0.3 units upward.<br>
           Horizontal Compression by factor of 1/6.<br>
           Horizontal Transformation 2.8 units to left.<br>
-          range:<br>
-          domain<br>
+          range:<br>domain
         </p>
       </div>
       <div class="why">
@@ -149,13 +131,15 @@
           I chose this graph because it clearly demonstrates how reciprocal functions behave when reflected and stretched.
         </p>
       </div>
-    </a>
+    </div>
 
-    <!-- graph 2 -->
-    <a href="https://www.desmos.com/calculator/ibvp8qyrce" target="_blank" class="card">
-      <div class="iframe-wrapper scale-graph">
-        <iframe src="https://www.desmos.com/calculator/ibvp8qyrce?embed"></iframe>
-      </div>
+    <!-- Graph 2 -->
+    <div class="card">
+      <a href="https://www.desmos.com/calculator/ibvp8qyrce" target="_blank" class="iframe-link">
+        <div class="iframe-wrapper scale-graph">
+          <iframe src="https://www.desmos.com/calculator/ibvp8qyrce?embed"></iframe>
+        </div>
+      </a>
       <div class="description">
         <h2>Graph 2</h2>
         <p contenteditable="true" data-id="desc2">
@@ -172,30 +156,9 @@
           This graph shows how the reciprocal squared function changes shape through vertical and horizontal transformations.
         </p>
       </div>
-    </a>
+    </div>
 
-    <!-- graph 3 -->
-    <a href="https://www.desmos.com/calculator/5lij2rpwgf" target="_blank" class="card">
-      <iframe src="https://www.desmos.com/calculator/5lij2rpwgf?embed"></iframe>
-      <div class="description">
-        <h2>Graph 3</h2>
-        <p contenteditable="true" data-id="desc3">
-          Parent Function: f(x) = x³<br>
-          Vertical Compression by a factor of 0.06<br>
-          Horizontal Transformations creating three zeros.
-        </p>
-      </div>
-      <div class="why">
-        <h3>Why I Chose This Graph and Picture</h3>
-        <p contenteditable="true" data-id="why3">
-          I found cubic transformations interesting because small changes can drastically alter the curvature and inflection.
-        </p>
-      </div>
-    </a>
-
-    <!-- 나머지 그래프들 동일 구조 -->
-    <!-- 그래프 4~9 -->
-    <!-- 네가 원래 작성한 링크 그대로 유지하면 돼 -->
+    <!-- 나머지 그래프들도 같은 구조로 -->
   </div>
 
   <footer>
@@ -203,14 +166,11 @@
   </footer>
 
   <script>
-    // 모든 contenteditable 요소를 가져옴
     document.querySelectorAll('[contenteditable="true"]').forEach(el => {
       const key = el.dataset.id;
-      // 저장된 내용이 있으면 불러오기
       const saved = localStorage.getItem(key);
       if (saved) el.innerHTML = saved;
 
-      // 내용이 바뀌면 자동 저장
       el.addEventListener('input', () => {
         localStorage.setItem(key, el.innerHTML);
       });
